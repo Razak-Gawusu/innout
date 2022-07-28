@@ -1,0 +1,103 @@
+@import 'config';
+
+@include media-md{
+    .home--wrapper{
+        .search--container{
+            .search{
+                &__form{
+                    width: 70%;
+                }
+            }
+        }
+
+        .home__page--main{
+            .home__page--products{
+                grid-template-columns: repeat(2, 1fr);
+            }        
+        }
+    }
+}
+
+@include media-md{
+    .home--wrapper{
+        .search--container{
+            .search{
+                &__form{
+                    width: 70%;
+                }
+            }
+        }
+
+        .home__page--main{
+            .home__page--products{
+                grid-template-columns: repeat(2, 1fr);
+            }        
+        }
+    }
+}
+
+
+@include media-lg{
+    .home--wrapper{
+        .search--container{
+            .search{
+                &__img{
+                    display: block;
+                }
+
+                &__form{
+                    width: 50%;
+                }
+            }
+        }
+
+        .home__page--main{
+            .home__page--products{
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }        
+        }
+    }
+
+    .single__product--wrapper{
+        .single__product{
+            @include flexdiv(row, space-between, flex-start);
+            &--primary{
+                width: 65%;  
+            }
+    
+            &--secondary{
+                width: 30%;
+            }
+        }
+    }
+
+    .dashboard--wrapper{
+      .dashboard{
+        &--content{
+          @include flexdiv(row, space-between, flex-start);
+          .dashboard__secondary{
+            width: 22.5%;
+          }
+    
+          .dashboard__primary{
+            width: 70%;
+            
+            &--main{
+              justify-items: start;
+                }
+            }
+            }
+        }
+    }
+}
+@include media-xlg{
+    .home--wrapper{
+        .home__page--main{
+            .home__page--products{
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+            }        
+        }
+    }
+}

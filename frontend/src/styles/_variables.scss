@@ -1,0 +1,44 @@
+$lightModeText: #000000;
+$lightModeBackground: #ffffff;
+$lightModeTextAlt: #0C090A;
+$darkModeText: #ffffff;
+$darkModeBackground: #141516 ;
+$darkModeBackgroundAlt:#212429;
+$darkModeTextAlt:   #acacac ;
+//$accentColor1: #582ca8;
+$accentColor1: #335dff;
+$accentColor3: #fffd00;
+$accentColor4: #b32020;
+
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    'bold': 600,
+    'bolder': 400,
+);
+
+@function weight($weight-name){
+    @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+
+@mixin flexdiv ($direction: row, $justify: flex-start, $align: flex-start, $gap: 1rem ) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+@mixin gridiv () {
+    display: grid;
+    place-items: center;
+}
+
+
+
+// title
+// font-family: 'Roboto', sans-serif;
+
+
+// content
+// font-family: 'Source Sans Pro', sans-serif;

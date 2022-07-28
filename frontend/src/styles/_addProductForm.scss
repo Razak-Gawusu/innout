@@ -1,0 +1,50 @@
+.product__form--wrapper{
+    .product--form__container{
+        margin: 7.5rem auto;
+        width: 60rem;
+        border: solid gray 1px;
+        padding: 4rem;
+        border-radius: .5rem;
+
+        .product--form{
+           &__item{
+            @include flexdiv();
+            margin-bottom: 2.5rem;
+
+            .form__group{
+                width: 47.5%;
+                label, input{
+                    display: block;
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    font-family: 'Source Sans Pro', sans-serif;
+                }
+
+                input{
+                    width: 100%;
+                    padding: .5rem 1rem;
+                }
+
+                .uploadInput{
+                    // background-color: $accentColor1;
+                }
+            }
+           }
+
+           .btn--createAd{
+            width: 100%;
+            font-size: 1.4rem;
+            padding: .75rem 1rem;
+            background-color: $accentColor1;
+            color: $darkModeText;
+            text-transform: uppercase;
+            border: none;
+            border-radius: .25rem;
+
+            &:hover{
+                background-color: blue;
+            }
+           }
+        }
+    }
+}

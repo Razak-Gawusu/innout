@@ -1,0 +1,110 @@
+@import 'variables';
+
+.home--wrapper{
+
+    .search--container{
+        //background: linear-gradient(90deg,pink, $accentColor1, $accentColor2, $accentColor3, $accentColor4);
+        background-color: $darkModeBackgroundAlt;
+        height: 30rem;
+        display: grid;
+        place-items: center;
+        
+        .search{
+            @include flexdiv();
+
+            &__img{
+                width: 25%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 30rem;
+                display: none;
+            }
+
+            &__img--left{
+                background-image: url('../../public/images/innout-5.png');
+                background-position-x: center;
+            }
+            &__img--right{
+                background-image: url('../../public/images/innout-3.png');
+                background-position-y: top 3rem;
+                background-position-x: left -2.5rem;
+            }
+
+            &__form{
+                .intro{
+                    margin: 2rem 0;
+                    text-align: center;
+                    color: $darkModeText;
+                    font-family: 'Source Sans Pro', sans-serif;
+
+                    h1{
+                        font-size: clamp(2rem, 2.5vw, 4rem);
+                        span{
+                            color: $accentColor1;
+                        }
+                    }
+                    p{
+                        font-size: 1.25rem;
+                    }
+                }
+                width: 100%;
+                margin: auto;
+                input{
+                    height: 5rem;
+                    border: none;
+                    width: 80%;
+                    padding: 0 2rem;
+                    font-size: 1.4rem;
+                    &:focus{
+                        border: $accentColor1 solid 2px;
+                        outline: none;
+                    }
+                }
+                button{
+                    width: 20%;
+                    height: 5rem;
+                    border: none;
+                    background-color: $accentColor1;
+    
+                    .search__icon{
+                        color: $darkModeText;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .home__page--main{
+        background-color: $darkModeBackground;
+        padding: 4rem 0;
+        min-height: 100vh;
+
+        &__title{
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $darkModeText;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            text-align: center
+        }
+
+        .home__page--products{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            row-gap: 5rem;
+            padding: 4rem 0;
+        }
+        
+        .product__card--wrapper{
+            transition: all .3s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+    }
+}
+
+
