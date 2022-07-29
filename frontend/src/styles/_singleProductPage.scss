@@ -1,6 +1,80 @@
 @import 'variables';
 
 .single__product--wrapper{
+    background-color: $lightModeBackground;
+    min-height: 100vh;
+    padding: 4rem 0;
+    .single__product{
+        //@include flexdiv(row, space-between, flex-start);
+        &--primary{
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $lightModeText;
+            padding: 4rem;
+            @include flexdiv(column, center, center);
+            background-color: $lightModeBackgroundAlt;
+
+            &__image{
+                display: block;
+            }
+
+            h3{
+                align-self: flex-start;
+                font-size: 2.5rem;
+                text-transform: capitalize;
+            }
+
+            p{
+                text-transform: capitalize;
+                font-size: 1.4rem;
+                align-self: flex-start
+            }
+            margin-bottom: 5rem
+        }
+
+        &--secondary{
+            @include flexdiv(column, 1rem);
+            color: $lightModeText;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            &__price{
+                background-color: $lightModeBackgroundAlt;
+                padding: 2rem;
+                font-size: 2.5rem;
+                color: $lightModeText;
+                width: 100%;
+            }
+
+            &__supplier{
+                @include flexdiv(column, center, center);
+                background-color: $lightModeBackgroundAlt;
+                padding: 2rem;
+                width: 100%;
+
+                h2{
+                    font-size: 2.5rem;
+                    text-align: center;
+                    padding: 1.7rem;
+                }
+
+                h4{
+                    background-color: $accentColor1;
+                    text-align: center;
+                    padding: 1rem 2rem;
+                    font-size: 2rem;
+                    transition: all .4s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $darkModeText;
+                        color: $accentColor1;
+                    }  
+                }
+            }
+        }
+    }
+}
+
+
+.single__product--wrapper.dark{
     background-color: $darkModeBackgroundAlt;
     min-height: 100vh;
     padding: 4rem 0;

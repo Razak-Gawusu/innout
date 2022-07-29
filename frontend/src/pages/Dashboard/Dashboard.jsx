@@ -4,9 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import {getProducts, deleteProduct} from '../../features/products/productSlice'
 import ProductView from '../../components/Product/ProductView'
 import {FaPlus} from 'react-icons/fa'
+import {useTheme} from '../../Context/ThemeProvider'
 
 
 function Dashboard() {
+  const theme = useTheme()
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -37,7 +39,7 @@ function Dashboard() {
 
   return (
 
-    <div className='dashboard--wrapper'>
+    <div className={`dashboard--wrapper ${theme ? 'dark' : ''}`}>
       <div className='dashboard container'>
         <div className='dashboard--content'>
           <section className='dashboard__secondary'>

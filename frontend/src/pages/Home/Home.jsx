@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react'
 import Search from '../../components/Search'
-import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import {getAllProducts, reset} from '../../features/allProducts/allProductsSlice'
-import AdvertProduct from '../../components/Product/AdvertProduct'
 import ProductView from '../../components/Product/ProductView'
+import {useTheme} from '../../Context/ThemeProvider'
 
 function Home() {
+    const theme = useTheme()
     const dispatch = useDispatch()
 
     const {products} = useSelector((state) => state.allProducts)
@@ -28,7 +28,7 @@ function Home() {
     }
   return (
     <>
-    <div className='home--wrapper'>
+    <div className={`home--wrapper ${theme ? 'dark' : ''}`}>
         <div className="home">
             <Search getAllProducts = {getAllProducts} />
 

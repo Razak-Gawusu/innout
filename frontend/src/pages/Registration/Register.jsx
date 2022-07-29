@@ -4,8 +4,10 @@ import {register, reset} from '../../features/auth/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
 import {FaInfo, FaCaretRight} from 'react-icons/fa'
 import { toast } from 'react-toastify'
+import {useTheme} from '../../Context/ThemeProvider'
 
 function Register() {
+  const theme = useTheme()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -58,9 +60,12 @@ function Register() {
   }
 
   return (
-    <div className='form--wrapper'>
+    <div className={`form--wrapper ${theme ? 'dark' : ''}`}>
       <div className="form--main container">
-      <img src="./images/logo-dark.png" alt="innout" className='form--logo'/>
+        {theme ?
+          <img src="./images/logo-light.png" alt="innout" className='form--logo' /> : 
+          <img src="./images/logo-dark.png" alt="innout" className='form--logo' /> 
+        }
       <div className='form'>
         <h2 className='form__title'>Create account</h2>
         <form onSubmit={handleSubmit}>
@@ -116,7 +121,7 @@ function Register() {
         </form>
 
         <div className='form--terms'>
-          <p >By creating an accout, you agree to Innout's <Link to='/'>Conditions of Use </Link> and <Link to='/'> Privary Notice</Link></p>
+          <p >By creating an accout, you agree to Innout's <Link className='link' to='/'>Conditions of Use </Link> and <Link className='link' to='/'> Privary Notice</Link></p>
         </div>
 
         <div className='sigin-form'>

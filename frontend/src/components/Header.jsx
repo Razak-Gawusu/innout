@@ -3,7 +3,6 @@ import { logout, reset } from '../features/auth/authSlice'
 import {useDispatch, useSelector} from 'react-redux'
 import {FaSignInAlt, FaUser, FaMoon, FaSun, FaSignOutAlt} from 'react-icons/fa'
 import {Link, useNavigate} from 'react-router-dom'
-import { useState } from 'react'
 import {useTheme, useUpdateTheme} from '../Context/ThemeProvider'
 
 function Header() {
@@ -26,10 +25,10 @@ function Header() {
     
 
   return (
-    <div className='header--wrapper'>
+    <div className={`header--wrapper ${theme ? 'dark': ''}`}>
         <div className='header container'>
             <Link to='/'>
-                <img src="./images/logo-light.png" alt="innout" />
+                <img src={require(`../images/${theme ? 'logo-light.png': 'logo-dark.png'}`)} alt="innout" />
             </Link>
             <ul className='nav__list'>
                 {user ? (

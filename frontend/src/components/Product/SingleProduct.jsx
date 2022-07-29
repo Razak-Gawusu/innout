@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link , useParams} from 'react-router-dom'
 import { getSingleProduct, reset } from '../../features/allProducts/allProductsSlice'
 import SingleProductView from './SingleProductView'
+import {useTheme} from '../../Context/ThemeProvider'
 
 function SingleProduct() {
+    const theme = useTheme()
     const {productId} = useParams()
     const dispatch = useDispatch()
 
@@ -26,7 +28,7 @@ function SingleProduct() {
     console.log(products )
     
   return (
-    <div className='single__product--wrapper'>
+    <div className={`single__product--wrapper ${theme ? 'dark' : ''}`}>
         <div className='container'>
             <Link className='btnBack' to='/'>Back</Link>
             <div className="single__product">

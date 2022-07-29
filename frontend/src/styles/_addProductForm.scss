@@ -1,50 +1,139 @@
-.product__form--wrapper{
-    .product--form__container{
-        margin: 7.5rem auto;
-        width: 60rem;
-        border: solid gray 1px;
-        padding: 4rem;
-        border-radius: .5rem;
+@import 'variables';
 
-        .product--form{
-           &__item{
-            @include flexdiv();
-            margin-bottom: 2.5rem;
+.postProduct{
+    background-color: $lightModeBackground;
+    min-height: 100vh;
+    padding: 7rem 0;
 
-            .form__group{
-                width: 47.5%;
-                label, input{
-                    display: block;
-                    font-size: 1.5rem;
-                    text-transform: capitalize;
-                    font-family: 'Source Sans Pro', sans-serif;
-                }
-
-                input{
-                    width: 100%;
-                    padding: .5rem 1rem;
-                }
-
-                .uploadInput{
-                    // background-color: $accentColor1;
-                }
-            }
-           }
-
-           .btn--createAd{
-            width: 100%;
-            font-size: 1.4rem;
-            padding: .75rem 1rem;
-            background-color: $accentColor1;
-            color: $darkModeText;
-            text-transform: uppercase;
-            border: none;
+    
+    .product__form--wrapper{
+        .btn.back{
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.322);
+            color: $lightModeText;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: $lightModeBackgroundAlt;
             border-radius: .25rem;
-
             &:hover{
-                background-color: blue;
+                background-color: $accentColor1;
+                color: $darkModeText
             }
-           }
+        }
+        .product--form__container{
+            background-color: $lightModeBackgroundAlt;
+            //width: 60rem;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.322);
+            padding: 4rem;
+            border-radius: .5rem;
+    
+            .product--form{
+               &__item{
+                //@include flexdiv();
+                margin-bottom: 2.5rem;
+    
+                .form__group{
+                    //width: 47.5%;
+                    label, input{
+                        display: block;
+                        font-size: 1.5rem;
+                        text-transform: capitalize;
+                        font-family: 'Source Sans Pro', sans-serif;
+                    }
+
+                    label{
+                        padding: .5rem 0;
+                    }
+    
+                    input{
+                        width: 100%;
+                        padding: .5rem 1rem;
+                        border: none;
+
+                        &:focus{
+                            outline: solid .1rem $darkModeBackgroundAlt;
+                        }
+                    }
+
+                    textArea{
+                        border: none;
+                        &:focus{
+                            outline: solid .1rem $darkModeBackgroundAlt;
+                        }
+                        padding: .5rem 1rem;
+                    }
+    
+                    .uploadInput{
+                        // background-color: $accentColor1;
+                    }
+                }
+               }
+    
+               .btn--createAd{
+                width: 100%;
+                font-size: 1.4rem;
+                padding: .75rem 1rem;
+                background-color: $accentColor1;
+                color: $darkModeText;
+                text-transform: uppercase;
+                border: none;
+                border-radius: .25rem;
+    
+                &:hover{
+                    opacity: .7;
+                }
+               }
+            }
         }
     }
 }
+.postProduct.dark{
+    background-color: $darkModeBackground;
+ 
+    .product__form--wrapper{
+        .btn.back{
+            color: $darkModeText;
+            background-color: $darkModeBackgroundAlt;
+            &:hover{
+                background-color: $accentColor1;
+                color: $darkModeText
+            }
+        }
+        .product--form__container{
+            background-color: $darkModeBackgroundAlt;
+            .product--form{
+               &__item{
+                .form__group{
+                    label{
+                        color: $darkModeTextAlt;
+                    }
+                    input{
+                        background-color: $darkModeBackground;
+                        color: $darkModeText;
+                    }
+
+                    textArea{
+                        background-color: $darkModeBackground;
+                        color: $darkModeText;
+                        
+                    }
+    
+                    .uploadInput{
+                        // background-color: $accentColor1;
+                    }
+                }
+               }
+    
+               .btn--createAd{
+                background-color: $darkModeBackground;
+                color: $darkModeText;
+                &:hover{
+                    background-color: $accentColor1;
+                }
+               }
+            }
+        }
+    }
+}
+

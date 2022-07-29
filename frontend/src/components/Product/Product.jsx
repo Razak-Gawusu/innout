@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {addProduct} from '../../features/products/productSlice'
-
+import { Link } from 'react-router-dom'
 
 function Product() {
+    
     const [productData, setProductData] = useState({
         name: '',
         price: '',
@@ -41,8 +42,8 @@ function Product() {
 
   return (
     <>
-        <div className="product__form--wrapper">
-            <div className="container">
+        <div className={`product__form--wrapper`}>
+            <Link className='btn back' to='/dashboard'>Back</Link>
             <div className='product--form__container'>
             <form onSubmit={handleSubmit} className='product--form'>
                 <div className='product--form__item'>
@@ -88,7 +89,6 @@ function Product() {
                 <button type='submit' className='btn btn--createAd'>create Ad</button>
             </form>
         </div>
-            </div>
         </div>
         
     </>

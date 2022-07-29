@@ -1,10 +1,8 @@
 @import 'variables';
 
 .home--wrapper{
-
     .search--container{
-        //background: linear-gradient(90deg,pink, $accentColor1, $accentColor2, $accentColor3, $accentColor4);
-        background-color: $darkModeBackgroundAlt;
+        background-color: $lightModeBackgroundAlt;
         height: 30rem;
         display: grid;
         place-items: center;
@@ -34,7 +32,7 @@
                 .intro{
                     margin: 2rem 0;
                     text-align: center;
-                    color: $darkModeText;
+                    color: $lightModeText;
                     font-family: 'Source Sans Pro', sans-serif;
 
                     h1{
@@ -77,14 +75,14 @@
     }
 
     .home__page--main{
-        background-color: $darkModeBackground;
+        background-color: $lightModeBackground;
         padding: 4rem 0;
         min-height: 100vh;
 
         &__title{
             font-family: 'Source Sans Pro', sans-serif;
-            color: $darkModeText;
-            font-size: 3.5rem;
+            color: $lightModeText;
+            font-size: 2.5rem;
             text-transform: uppercase;
             text-align: center
         }
@@ -104,6 +102,43 @@
             }
         }
         
+    }
+}
+
+
+.home--wrapper.dark{
+    .search--container{
+        background-color: $darkModeBackground;
+        
+        .search{
+
+            &__form{
+                .intro{
+                    color: $darkModeText;
+                }
+                input{
+                    &:focus{
+                        border: $accentColor1 solid 2px;
+                        outline: none;
+                    }
+                }
+                button{
+                    background-color: $accentColor1;
+    
+                    .search__icon{
+                        color: $darkModeText;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .home__page--main{
+        background-color: $darkModeBackgroundAlt;
+        &__title{
+            color: $darkModeText;
+        }
     }
 }
 

@@ -34,6 +34,23 @@
             }        
         }
     }
+
+    .postProduct{
+        .product__form--wrapper{
+            .product--form__container{
+                width: 60rem;
+                margin: auto;
+                .product--form{
+                   &__item{
+                    @include flexdiv(row, space-between, center);
+                    .form__group{
+                        width: 45%;    
+                    }
+                   }
+                }
+            }
+        }
+    }
 }
 
 

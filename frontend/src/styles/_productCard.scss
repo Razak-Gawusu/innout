@@ -1,7 +1,7 @@
 @import 'variables';
 
 .product__card{
-    background-color: rgba(128, 128, 128, 0.247);
+    background-color: $lightModeBackgroundAlt;
     height: 25rem;
     width: 20rem;
     
@@ -26,4 +26,8 @@
         }
     }
 
+}
+
+.product__card.dark{
+    //background-color: rgba(0, 0, 0, 0.397) !important;
 }

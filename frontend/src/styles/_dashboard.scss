@@ -19,11 +19,12 @@
     }
 }
 
+
+
 .dashboard--wrapper{
-    background-color: $darkModeBackgroundAlt;
+    background-color: $lightModeBackground;
     min-height: 100vh;
     padding: 4rem 0;
-  }
   .dashboard{
     color: $lightModeText;
 
@@ -32,12 +33,94 @@
     }
 
     &--content{
-      //@include flexdiv(row, space-between, flex-start);
-
       .dashboard__secondary{
         @include flexdiv(column, flex-start, center);
+        margin-bottom: 10rem;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $lightModeText;
+
+        &--title{
+          font-size: 2.5rem;
+          margin-bottom: 5rem;
+          text-align: center;
+        }
+
+        .addProduct__link{
+          color: $lightModeText;
+          font-size: 1.75rem;
+          
+          &:hover{
+            color: $accentColor1;
+            text-decoration: underline;
+          }
+        }
+
+      }
+
+      .dashboard__primary{
+        //width: 70%;
         //height: 100vh;
-        //width: 22.5%;
+        color: $lightModeText;
+
+        &--title{
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 2.5rem;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+        
+        &--main{
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2rem;
+          justify-items: center;
+        }
+
+        .btn{
+          width: 50%;
+          border: none;
+          padding: 1rem 0;
+        }
+        .btn--delete{
+          background-color: rgb(252, 53, 53);
+          color: $darkModeText;
+          width: 50%;
+          border: none;
+          padding: 1rem 0;
+          &:hover{
+            background-color: red;
+          }
+        }
+        .btn--update{
+          color: $lightModeText;
+          background-color: $lightModeBackground;
+          width: 50%;
+          border: none;
+          padding: 1rem 0;
+          &:hover{
+            color: $lightModeText
+          }
+        }
+      }
+    }
+  }
+}
+   
+
+
+.dashboard--wrapper.dark{
+    background-color: $darkModeBackground;
+  
+  .dashboard{
+    color: $lightModeText;
+
+    &__title{
+      text-align: center;
+    }
+
+    &--content{
+      .dashboard__secondary{
         margin-bottom: 10rem;
         font-family: 'Source Sans Pro', sans-serif;
         color: $darkModeText;
@@ -108,3 +191,4 @@
       }
     }
   }
+}

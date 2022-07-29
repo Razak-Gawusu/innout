@@ -1,12 +1,15 @@
 import Product from './Product'
-import { Link } from 'react-router-dom'
+
+import {useTheme} from '../../Context/ThemeProvider'
 
 function PostProduct() {
-   
+  const theme = useTheme()
   return (
-    <div>
+    <div className={`postProduct ${theme ? 'dark' : ''}`}>
+      <div className="container">
+        
         <Product />
-        <Link to='/dashboard'>Back</Link>
+      </div>
     </div>
   )
 

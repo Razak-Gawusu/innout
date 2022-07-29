@@ -1,13 +1,12 @@
 @import 'variables';
 
 .header--wrapper{
-    background-color: rgb(21, 21, 24);
-
+    background-color: $lightModeBackgroundAlt;
     .header{
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      padding: .25rem 0;
       img{
         width: 10rem;
       }
@@ -21,7 +20,6 @@
         .header--logo{
           border: none;
           border-radius: .5rem;
-          background-color: white;
           padding: .5rem 1rem;
           font-family: 'Source Sans Pro', sans-serif;
           font-weight: weight(bold);
@@ -29,7 +27,7 @@
 
         .nav__link{
           text-decoration: none;
-          color: white;
+          color: $lightModeText;
           font-size: 1.6rem;
         }
 
@@ -37,13 +35,34 @@
           margin-left: 4rem;
 
           &--icon{
-            color: white;
+            color: $lightModeText;
             font-size: 1.75rem;
           }
         }
       }
     }
-  }
+}
+
+.header--wrapper.dark{
+    background-color: $darkModeBackgroundAlt;
+    .header{
+      padding: 0;
+      .nav__list{
+        .nav__link{
+          color: $darkModeText;
+        }
+        .themeToggle{
+          &--icon{
+            color: $darkModeText;
+          }
+        }
+      }
+    }
+}
+
+
+    
+  
   
   
   
