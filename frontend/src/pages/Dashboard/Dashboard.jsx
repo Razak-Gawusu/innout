@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import {getProducts, deleteProduct} from '../../features/products/productSlice'
+import {getProducts} from '../../features/products/productSlice'
 import ProductView from '../../components/Product/ProductView'
 import {FaPlus} from 'react-icons/fa'
 import {useTheme} from '../../Context/ThemeProvider'
@@ -42,6 +42,7 @@ function Dashboard() {
     <div className={`dashboard--wrapper ${theme ? 'dark' : ''}`}>
       <div className='dashboard container'>
         <div className='dashboard--content'>
+
           <section className='dashboard__secondary'>
           <div className='profile'>
             <h3>{user && userInitials}</h3>
@@ -50,21 +51,15 @@ function Dashboard() {
           <Link to='/dashboard/addProduct' className='addProduct__link'> Add New Product <FaPlus className='addProduct' /></Link>
           <img src="../images/howtouse3.png" alt="" />
           </section>
+
           <section className='dashboard__primary'>
-            <h2 className='dashboard__primary--title'>All Products</h2>
+            <h2 className='dashboard__primary--title'>Products</h2>
             <div className='dashboard__primary--main'>
               {products.map((product) => (
-                <div>
-                  <ProductView 
-                  key={product._id}
-                  product={product}
-                  />
-                  
-                  <div>
-                    <button className='btn btn--delete' onClick={()=>dispatch(deleteProduct(product._id))}>Delete</button>
-                    <button className='btn btn--update' onClick={()=>dispatch(deleteProduct(product._id))}>Update</button>
-                  </div>
-                </div>
+                <ProductView 
+                key={product._id}
+                product={product}
+                />
               ))}
             </div>
           </section>

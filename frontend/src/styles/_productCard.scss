@@ -4,6 +4,7 @@
     background-color: $lightModeBackgroundAlt;
     height: 25rem;
     width: 20rem;
+    padding: 1rem;
     
 
     &--image{
@@ -29,5 +30,5 @@
 }
 
 .product__card.dark{
-    //background-color: rgba(0, 0, 0, 0.397) !important;
+    background-color: rgba(99, 99, 99, 0.205);
 }

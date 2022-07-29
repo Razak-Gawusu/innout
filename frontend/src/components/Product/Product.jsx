@@ -36,7 +36,7 @@ function Product() {
         console.log(productData)
 
         dispatch(addProduct(productData))
-        navigate('/')    
+        navigate('/dashboard')    
     }
 
 

@@ -15,8 +15,15 @@
         @content;
     }
 }
+
 @mixin media-xlg {
     @media screen and (min-width: 1080px) {
+        @content;
+    }
+}
+
+@mixin media-xxlg {
+    @media screen and (min-width: 1350px) {
         @content;
     }
 }

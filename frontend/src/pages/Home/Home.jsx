@@ -10,9 +10,6 @@ function Home() {
     const dispatch = useDispatch()
 
     const {products} = useSelector((state) => state.allProducts)
-    const {user} = useSelector((state) => state.auth)
-
-    console.log(products)
 
     useEffect(() => {
         dispatch(reset())
@@ -20,12 +17,6 @@ function Home() {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    let to 
-    if(user){
-        to = '/addProduct'
-    } else {
-        to ='/login'
-    }
   return (
     <>
     <div className={`home--wrapper ${theme ? 'dark' : ''}`}>

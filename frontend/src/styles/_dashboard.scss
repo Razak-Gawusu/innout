@@ -58,8 +58,6 @@
       }
 
       .dashboard__primary{
-        //width: 70%;
-        //height: 100vh;
         color: $lightModeText;
 
         &--title{
@@ -73,34 +71,9 @@
         &--main{
           display: grid;
           grid-template-columns: repeat(1, 1fr);
-          gap: 2rem;
           justify-items: center;
-        }
-
-        .btn{
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-        }
-        .btn--delete{
-          background-color: rgb(252, 53, 53);
-          color: $darkModeText;
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-          &:hover{
-            background-color: red;
-          }
-        }
-        .btn--update{
-          color: $lightModeText;
-          background-color: $lightModeBackground;
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-          &:hover{
-            color: $lightModeText
-          }
+          row-gap: 5rem;
+          padding: 4rem 0;
         }
       }
     }
@@ -115,79 +88,22 @@
   .dashboard{
     color: $lightModeText;
 
-    &__title{
-      text-align: center;
-    }
-
     &--content{
       .dashboard__secondary{
-        margin-bottom: 10rem;
-        font-family: 'Source Sans Pro', sans-serif;
         color: $darkModeText;
-
-        &--title{
-          font-size: 2.5rem;
-          margin-bottom: 5rem;
-          text-align: center;
-        }
 
         .addProduct__link{
           color: $darkModeText;
-          font-size: 1.75rem;
           
           &:hover{
             color: $accentColor1;
             text-decoration: underline;
           }
         }
-
       }
 
       .dashboard__primary{
-        //width: 70%;
-        //height: 100vh;
         color: $darkModeText;
-
-        &--title{
-          font-family: 'Source Sans Pro', sans-serif;
-          font-size: 3.5rem;
-          text-transform: uppercase;
-          text-align: center;
-          margin-bottom: 4rem;
-        }
-        
-        &--main{
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 2rem;
-          justify-items: center;
-        }
-
-        .btn{
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-        }
-        .btn--delete{
-          background-color: rgb(252, 53, 53);
-          color: $darkModeText;
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-          &:hover{
-            background-color: red;
-          }
-        }
-        .btn--update{
-          color: $lightModeText;
-          background-color: $lightModeBackground;
-          width: 50%;
-          border: none;
-          padding: 1rem 0;
-          &:hover{
-            color: $lightModeText
-          }
-        }
       }
     }
   }

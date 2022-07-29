@@ -94,14 +94,6 @@
             row-gap: 5rem;
             padding: 4rem 0;
         }
-        
-        .product__card--wrapper{
-            transition: all .3s ease-in-out;
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-        
     }
 }
 

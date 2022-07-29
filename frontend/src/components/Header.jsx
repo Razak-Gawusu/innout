@@ -39,13 +39,13 @@ function Header() {
                             </button>
                         </li>
                         
-                        <li className='nav__item'>
+                        <li className='nav__item' title='dashboard'>
                             <Link className='nav__link' to='/dashboard'>
                                 <FaUser className='nav__item--img'/>
                             </Link> 
                         </li>
 
-                        <li className='nav__item themeToggle' onClick={toggleTheme}>
+                        <li className='nav__item themeToggle' onClick={toggleTheme} title='change theme'>
                             {(theme) ? (<FaSun className='themeToggle--icon'/>):(<FaMoon className='themeToggle--icon'/>)}
                         </li>
                     </> 
@@ -56,7 +56,7 @@ function Header() {
                             <FaSignInAlt className='nav__item--img'/> Login
                         </Link> 
                     </li>
-                    <li className='nav__item themeToggle' onClick={toggleTheme}>
+                    <li className='nav__item themeToggle' onClick={toggleTheme} change theme>
                         {(theme) ? (<FaSun className='themeToggle--icon'/>):(<FaMoon className='themeToggle--icon'/>)}
                     </li>
                 </>)}

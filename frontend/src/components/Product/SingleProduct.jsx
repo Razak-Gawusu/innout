@@ -25,7 +25,6 @@ function SingleProduct() {
         }
     }, [productId, dispatch, message, isError])
 
-    console.log(products )
     
   return (
     <div className={`single__product--wrapper ${theme ? 'dark' : ''}`}>

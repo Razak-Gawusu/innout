@@ -1,0 +1,19 @@
+.product__card--wrapper{
+    transition: all .3s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btnBack{
+    color: $darkModeText;
+    font-size: 1.7rem;
+    background-color: $accentColor1;
+    padding: .75rem 1.5rem;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    &:hover{
+        background-color: $darkModeText;
+        color: $accentColor1;
+    }
+}

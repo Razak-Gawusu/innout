@@ -47,7 +47,7 @@
             &__supplier{
                 @include flexdiv(column, center, center);
                 background-color: $lightModeBackgroundAlt;
-                padding: 2rem;
+                padding: 2rem 2rem 5rem 2rem;
                 width: 100%;
 
                 h2{
@@ -67,6 +67,36 @@
                         background-color: $darkModeText;
                         color: $accentColor1;
                     }  
+                }
+            }
+
+            &__item{
+                width: 100%;
+                @include flexdiv(row, space-between, center);
+
+                .btn{
+                    border: none;
+                    display: block;
+                    width: 50%;
+                    gap: 2rem;
+                    padding: .5em 1.25em;
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    font-family: 'Source Sans Pro', sans-serif;
+
+                    &:hover{
+                        opacity: .75;
+                    }
+                }
+
+                .update{
+                    background-color: $accentColor5;
+                    color: $darkModeText;
+                }
+                .delete{
+                    background-color: $accentColor4;
+                    color: $darkModeText;
                 }
             }
         }

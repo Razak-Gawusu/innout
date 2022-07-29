@@ -1,6 +1,10 @@
 @import 'variables';
 
 .header--wrapper{
+  // position: fixed;
+
+  // top: 0;
+  // width: 100%;
     background-color: $lightModeBackgroundAlt;
     .header{
       display: flex;
@@ -37,6 +41,7 @@
           &--icon{
             color: $lightModeText;
             font-size: 1.75rem;
+            cursor: pointer;
           }
         }
       }
