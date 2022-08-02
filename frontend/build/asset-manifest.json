@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df76465b.css",
+    "main.js": "/static/js/main.6aa5cd54.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/howtouse2.png": "/static/media/howtouse2.b890cf062cfcc57d3b26.png",
+    "static/media/howtouse3.png": "/static/media/howtouse3.925f5a70ae7ee0b97890.png",
+    "static/media/innout-1.png": "/static/media/innout-1.c023f7ca074c8ccea3ed.png",
+    "static/media/innout-5.png": "/static/media/innout-5.4305e5daae5c906e11bb.png",
+    "static/media/innout-3.png": "/static/media/innout-3.677181d6ef57a39b4afc.png",
+    "static/media/innout-4.png": "/static/media/innout-4.1867b4ae88f6a0afb44c.png",
+    "static/media/xbox.png": "/static/media/xbox.e8f533dbf7db970cc3a9.png",
+    "static/media/IPhone-X-Silver.png": "/static/media/IPhone-X-Silver.a59086d91aab2f987372.png",
+    "static/media/pixel5.png": "/static/media/pixel5.a89c233e8141fbe0c4fc.png",
+    "static/media/howToUse.jpg": "/static/media/howToUse.e8d3e389ef2495d1ac7b.jpg",
+    "static/media/IPhone-X-Silver.jpg": "/static/media/IPhone-X-Silver.97948ae081a0909cd1b8.jpg",
+    "static/media/display.png": "/static/media/display.a66c31c7a57a4acf72c9.png",
+    "static/media/logo-dark.png": "/static/media/logo-dark.251e47d53a32c2192dfa.png",
+    "static/media/logo-light.png": "/static/media/logo-light.62fc9820adf073a34b66.png",
+    "index.html": "/index.html",
+    "main.df76465b.css.map": "/static/css/main.df76465b.css.map",
+    "main.6aa5cd54.js.map": "/static/js/main.6aa5cd54.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df76465b.css",
+    "static/js/main.6aa5cd54.js"
+  ]
+}
