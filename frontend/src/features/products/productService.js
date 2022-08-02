@@ -13,6 +13,7 @@ const getProducts = async (token) => {
     return response.data
 }
 
+
 const addProduct = async (productData, token) => {
     const config = {
         headers: {
@@ -25,6 +26,18 @@ const addProduct = async (productData, token) => {
     return response.data
 }
 
+
+const updateProduct = async (productData, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data'
+        }
+    }
+
+    const response = await axios.post(API_URL, productData, config)
+    return response.data
+}
 
 const deleteProduct = async (productId, token) => {
     const config = {
@@ -41,6 +54,7 @@ const deleteProduct = async (productId, token) => {
 const productService = {
     addProduct,
     getProducts,
+    updateProduct,
     deleteProduct, 
 }
 
