@@ -9,7 +9,7 @@ function Search({getAllProducts}) {
 
 
     const handleChange = (e) => {
-        dispatch(getAllProducts(e.target.value))
+        //dispatch(getAllProducts(e.target.value))
         setSearch(prevState => e.target.value)
     }
 
