@@ -1,6 +1,5 @@
 const path = require('path')
 const express = require('express')
-const colors = require('colors')
 const dotenv = require('dotenv').config()
 const app = express()
 const fileUpload = require('express-fileupload')

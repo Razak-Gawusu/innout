@@ -14,7 +14,6 @@
   "author": "gawusu",
   "license": "ISC",
   "devDependencies": {
-    "colors": "^1.4.0",
     "concurrently": "^7.2.2",
     "nodemon": "^2.0.16"
   },
